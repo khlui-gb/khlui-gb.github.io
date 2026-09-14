@@ -66,12 +66,24 @@
         .hero h1 {
             font-size: 3.2rem;
             font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #ffffff; /* Fallback color */
+        }
+
+        .hero h1 .gradient-text {
             background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 20px;
-            line-height: 1.2;
+        }
+
+        .hero h1 .emoji {
+            -webkit-text-fill-color: initial;
+            color: initial;
+            display: inline-block;
+            font-size: 2.8rem;
+            vertical-align: middle;
         }
 
         .hero p {
@@ -287,6 +299,7 @@
         /* Responsive */
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.2rem; }
+            .hero h1 .emoji { font-size: 1.9rem; }
             .hero p { font-size: 1rem; }
             .container { padding: 40px 18px 60px; }
             .section-title { font-size: 1.3rem; }
@@ -298,7 +311,10 @@
         <!-- Hero -->
         <div class="hero">
             <div class="greeting">Hello, I'm</div>
-            <h1>Kin 👋</h1>
+            <h1>
+                <span class="gradient-text">Kin</span>
+                <span class="emoji">👋</span>
+            </h1>
             <p>A developer passionate about building projects, exploring AI, and learning new things every day.</p>
             <div class="status">
                 <span class="dot"></span>
